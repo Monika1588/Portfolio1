@@ -1,0 +1,322 @@
+/* --Contact Section- */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #0f1117, #111219);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  gap: 90px;
+  position: relative;
+  overflow: hidden;
+}
+    
+/* -- Left Side -- */
+.contact-left {
+  flex: 1 1 400px;
+  max-width: 600px;
+  position: relative;
+}
+
+.contact-left::before {
+  content: "CONTACT";
+  position: absolute;
+  top: -100px;
+  left: -10px;
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 0.025);
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.contact-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #cfa859, transparent);
+  margin-top: 8px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.contact-heading:hover {
+  color: #cfa859;
+  transform: scale(1.05);
+}
+
+.contact-heading:hover::after {
+  background: #cfa859;
+  width: 100px;
+}
+
+.contact-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-top: 15px;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+/* --Right Side  --*/
+.contact-right {
+  flex: 1 1 400px;
+  max-width: 600px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 16px 18px;
+  background: #1a1a1a;;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #cfa859;
+  box-shadow: 0 0 20px rgba(207, 168, 89, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+/* -- Submit-- */
+.contact-btn {
+    display: inline-block;
+    background: #cfa859;
+    color: #0f1117;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+    width: 65%;
+  }
+  
+  .contact-btn span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .contact-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+  }
+  
+  .contact-btn:hover::after {
+    left: 0;
+  }
+  
+  .contact-btn:hover {
+    background: #fff;
+    color: #0f1117;
+  }
+
+.contact-section.show .contact-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-section.show .contact-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-section.show .contact-description {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.thankyou-overlay {
+position: fixed;
+inset: 0;
+background: rgba(15, 17, 23, 0.85);
+backdrop-filter: blur(6px);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+animation: fadeIn 0.4s ease;
+}
+
+.thankyou-card {
+background: linear-gradient(145deg, #111219, #0f1117);
+border-radius: 22px;
+padding: 40px 35px;
+max-width: 420px;
+width: 90%;
+text-align: center;
+color: #eaeaea;
+box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+animation: scaleUp 0.4s ease;
+}
+
+.thankyou-icon {
+width: 70px;
+height: 70px;
+margin: 0 auto 20px;
+border-radius: 50%;
+background: linear-gradient(135deg, #cfa859, #f5d98b);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 32px;
+font-weight: bold;
+color: #0f1117;
+}
+
+.thankyou-card h3 {
+font-size: 1.7rem;
+margin-bottom: 12px;
+}
+
+.thankyou-card p {
+font-size: 1rem;
+line-height: 1.6;
+color: #cfcfcf;
+margin-bottom: 30px;
+}
+
+.thankyou-btn {
+padding: 12px 36px;
+border-radius: 30px;
+border: none;
+cursor: pointer;
+font-size: 0.95rem;
+font-weight: 600;
+background: linear-gradient(135deg, #cfa859, #f5d98b);
+color: #0f1117;
+transition: all 0.3s ease;
+}
+
+.thankyou-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 30px rgba(207, 168, 89, 0.4);
+}
+
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+from {
+  opacity: 0;
+  transform: scale(0.85);
+}
+to {
+  opacity: 1;
+  transform: scale(1);
+}
+}
+
+@media (max-width: 1200px) {
+  .contact-section {
+    padding: 80px 50px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 70px 40px;
+    gap: 50px;
+  }
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+  .contact-heading {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .contact-description {
+    text-align: center;
+  }
+  .contact-right {
+    transform: translateX(0);
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.8rem;
+  }
+  .contact-description {
+    font-size: 1rem;
+  }
+  .contact-input,
+  .contact-textarea {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+  .contact-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}

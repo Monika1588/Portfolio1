@@ -1,0 +1,114 @@
+  section {
+    padding: 120px 8%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  .about {
+    position: relative;
+    padding: 140px 40px;
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 60px;
+  }
+
+  .about::before {
+    content: "ABOUT ME";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 14px;
+    color: rgba(255, 255, 255, 0.025);
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .about::before {
+    content: "ABOUT ME";
+    position: absolute;
+    top: 40px;
+    left: 35%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+
+    color: rgba(255, 255, 255, 0.035);
+  
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+  
+  .about h2 {
+    grid-column: 1;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    position: relative;
+  }
+
+  .about h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    margin-top: 16px;
+    background: linear-gradient(90deg, #cfa859, transparent);
+    transform: skewX(-12deg);
+  }
+
+  .about p {
+    grid-column: 2;
+    font-size: 1.12rem;
+    line-height: 2;
+    color: #d4d4d4;
+    max-width: 900px;
+    padding-left: 22px;
+    border-left: 3px solid rgba(207, 168, 89, 0.45);
+    position: relative;
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    .about {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+      padding: 100px 20px;
+    }
+  
+    .about::before {
+      font-size: 4rem;
+    }
+  
+    .about h2 {
+      text-align: left;
+    }
+  
+    .about p {
+      grid-column: 1;
+      padding-left: 18px;
+    }
+  }
+  

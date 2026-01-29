@@ -1,0 +1,238 @@
+.education-section {
+    background: #0f1117;
+    padding: 100px 40px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    position: relative;   
+    overflow: hidden;
+  }
+  
+  .education-section::before {
+    content: "EDUCATION";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 14px;
+    color: rgba(255, 255, 255, 0.025);
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .education-section * {
+    position: relative;
+    z-index: 1;
+  }
+  .education-section::before {
+    top: 20px;
+  }
+
+     
+  /* -- Header -- */
+  .edu-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .edu-header h2 {
+    font-size: 48px;
+    margin-top: 15px;
+    display: inline-block; 
+    color: #fff;     
+    transition: color 0.3s ease; 
+    cursor: pointer; 
+  }
+
+  .edu-header h2:hover {
+    color: #cfa859; 
+  }
+
+  .edu-header .muted {
+    color: #fff;
+  }
+  
+.edu-header::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 4px;
+    margin: 16px auto 0;
+    background: linear-gradient(90deg, transparent, #cfa859, transparent);
+    border-radius: 4px;
+  }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+  
+  .column-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  
+  .icon {
+    color: #cfa859;
+    border: 1px solid #cfa859;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  
+  .edu-item {
+    background: linear-gradient(180deg, #111, #0c0c0c);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .edu-item:hover {
+    border-color: #cfa859;
+    transform: translateY(-3px);
+  }
+  
+  .year {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #cfa859;
+  }
+  
+  .edu-item h4 {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  
+  .college {
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+  
+  .desc {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+  }
+  
+  /* CERTIFICATION CARDS*/
+  .cert-card {
+    background: linear-gradient(180deg, #111, #0c0c0c);
+    border: 1px solid #222;
+    padding: 38px 24px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-card:hover {
+    border-color: #cfa859;
+    transform: translateY(-3px);
+  }
+  
+  .cert-card h4 {
+    font-size: 18px;
+  }
+  
+  .cert-card p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 6px;
+  }
+  
+  .cert-card span {
+    color: #cfa859;
+    margin-left: 6px;
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+@media (max-width: 1024px) {
+    .education-section {
+      padding: 80px 30px;
+    }
+  
+    .education-section::before {
+      font-size: 6rem;
+      letter-spacing: 10px;
+      top: 30px;
+    }
+  
+    .edu-header h2 {
+      font-size: 40px;
+    }
+  
+    .edu-grid {
+      gap: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .education-section {
+      padding: 70px 20px;
+    }
+  
+    .education-section::before {
+      font-size: 4rem;
+      letter-spacing: 6px;
+      top: 20px;
+    }
+  
+    .edu-header {
+      margin-bottom: 50px;
+    }
+  
+    .edu-header h2 {
+      font-size: 34px;
+    }
+  
+    .edu-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .column-title {
+      font-size: 20px;
+    }
+  
+    .edu-item,
+    .cert-card {
+      padding: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .education-section::before {
+      font-size: 3rem;
+      letter-spacing: 4px;
+    }
+  
+    .edu-header h2 {
+      font-size: 28px;
+    }
+  
+    .column-title {
+      font-size: 18px;
+    }
+  
+    .edu-item h4,
+    .cert-card h4 {
+      font-size: 16px;
+    }
+  
+    .college,
+    .desc,
+    .cert-card p {
+      font-size: 12px;
+    }
+  }
+
