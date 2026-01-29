@@ -4,15 +4,11 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
 dotenv.config();
-
 connectDB();
 
-const app = express();  
+const app = express();
 
-app.use(cors({
-  origin: "https://jolly-tiramisu-3bc1f2.netlify.app",
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/projects", require("./routes/projectRoutes"));
