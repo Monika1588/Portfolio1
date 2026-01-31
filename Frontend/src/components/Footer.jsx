@@ -42,8 +42,8 @@ const Footer = () => {
           <div className="footer-brand">
             <h2>Monika Verma</h2>
             <p>
-              Frontend Developer focused on crafting clean, scalable and
-              user-centric digital experiences.
+              Frontend Developer focused on crafting clean, scalable
+              web applications.
             </p>
           </div>
 
