@@ -216,6 +216,23 @@ color: #0f1117;
     padding: 25px;
   }
 }
+
+.section-title::before {
+  content: "FEEDBACK";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0em;
+  color: rgba(255, 255, 255, 0.025);
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 .thankyou-card {
   background: linear-gradient(145deg, #111219, #0f1117);
   border-radius: 22px;

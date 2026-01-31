@@ -164,3 +164,10 @@
   .project-bubbles.active .bubble:nth-child(3) { transform: translate(-60px,60px) scale(1); }
   .project-bubbles.active .bubble:nth-child(4) { transform: translate(60px,60px) scale(1); }
 }
+@media (max-width: 768px) {
+  .skills-pro::before {
+    top: 80px;
+    font-size: 4.5rem;
+    letter-spacing: 6px;
+  }
+}
