@@ -60,6 +60,20 @@ header {
   
 
 }
+.location {
+  display: inline-flex;      
+  align-items: center;        
+  gap: 5px;                   
+  font-size: 16px;          
+  color: #1f2937;             
+  font-weight: 500;        
+}
+
+.location svg {
+  color: #ffffff;            
+  width: 18px;              
+  height: 18px;
+}
 
 .hero-btns {
   margin-top: 45px;

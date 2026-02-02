@@ -37,8 +37,8 @@ export default function Feedback() {
   });
 
   const [error, setError] = useState("");
-
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); 
 
   const submit = async (e) => {
     e.preventDefault();
@@ -48,15 +48,17 @@ export default function Feedback() {
       return;
     }
 
+    setIsSubmitting(true); 
+
     try {
       await sendFeedback(form);
-
       setShowPopup(true);
-
       setForm({ name: "", rating: 0, message: "" });
       setError("");
     } catch (err) {
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -66,17 +68,17 @@ export default function Feedback() {
 
       <form className="feedback-form" onSubmit={submit}>
         <p className="feedback-intro">
-
           <strong><h3>Wait, before you go…</h3></strong>
           <i> I’d like to hear your valuable feedback on this portfolio experience.</i>
         </p>
-        
+
         <StarRating
           rating={form.rating}
           setRating={(value) => setForm({ ...form, rating: value })}
           error={error}
           clearError={() => setError("")}
         />
+
         <input
           type="text"
           placeholder="Your Name"
@@ -85,16 +87,14 @@ export default function Feedback() {
           required
         />
 
-
-
         <textarea
           placeholder="Your Feedback"
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
 
-        <button type="submit">
-          <span>Send Feedback</span>
+        <button type="submit" disabled={isSubmitting}>
+          <span>{isSubmitting ? "Sending..." : "Send Feedback"}</span>
         </button>
       </form>
 

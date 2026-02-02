@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { sendContact } from "../services/api";
 import "./Contact.css";
+import { FaThumbsUp, FaCheck } from "react-icons/fa";
 
 export default function Contact() {
   const [data, setData] = useState({
@@ -10,6 +11,7 @@ export default function Contact() {
   });
 
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sectionRef = useRef(null);
 
@@ -34,14 +36,16 @@ export default function Contact() {
   const submit = async (e) => {
     e.preventDefault();
 
+    setIsSubmitting(true);
+
     try {
       await sendContact(data);
-
       setShowPopup(true);
-
       setData({ name: "", email: "", message: "" });
     } catch (error) {
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -81,8 +85,8 @@ export default function Contact() {
             required
           />
 
-          <button className="contact-btn">
-            <span>Send Message</span>
+          <button className="contact-btn" disabled={isSubmitting}>
+            <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
           </button>
         </form>
       </div>
@@ -90,11 +94,13 @@ export default function Contact() {
       {showPopup && (
         <div className="thankyou-overlay">
           <div className="thankyou-card">
-            <div className="thankyou-icon">✓</div>
+          <div className="thankyou-icon">
+  <FaCheck className="tick-icon" />
+</div>
 
             <h3>Message Sent Successfully</h3>
             <p>
-              Thank you for reaching out.  
+              Thank you for reaching out.
               Your message has been delivered, and I’ll get back to you as soon as possible.
             </p>
 
@@ -102,7 +108,7 @@ export default function Contact() {
               className="thankyou-btn"
               onClick={() => setShowPopup(false)}
             >
-              Got it 👍
+              Got it <FaThumbsUp />
             </button>
           </div>
         </div>

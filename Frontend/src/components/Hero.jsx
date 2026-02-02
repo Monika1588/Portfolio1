@@ -3,6 +3,7 @@ import "./Hero.css";
 import resume from "../assets/Monika Verma(Resume).pdf";
 import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
+import { GoLocation } from "react-icons/go";
 
 const Hero = () => {
   const email = "vermamonika3733@gmail.com";
@@ -26,11 +27,14 @@ const Hero = () => {
           <h1>Monika Verma</h1>
 
           <p>
-            Frontend Developer and MCA student, focused on building
+            Passionate Frontend Developer and MCA student, focused on building
             clean, responsive, and user-friendly web interfaces. Actively
             learning full-stack development to create complete, scalable web
             applications.
           </p>
+          <p className="location">
+  <GoLocation /> Haryana, India
+</p>
 
           <div className="hero-btns">
             <a href="#projects" className="btn primary">View My Work</a>

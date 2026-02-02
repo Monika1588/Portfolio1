@@ -2,14 +2,14 @@ import "./Education.css";
 import { FaGraduationCap, FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 
 const Education = () => {
-  // Certifications with links
   const certifications = [
     { title: "Back End Development and APIs V8", provider: "FreeCodeCamp", date: "Dec 2025", link: "https://freecodecamp.org/certification/fcc-c294ae29-284d-461f-a820-bdb821c1c8a4/back-end-development-and-apis" },
     { title: "Frontend Development Libraries", provider: "FreeCodeCamp", date: "Nov 2025", link: "https://www.freecodecamp.org/certification/fcc-c294ae29-284d-461f-a820-bdb821c1c8a4/front-end-development-libraries" },
-    { title: "Responsive Web Design", provider: "FreeCodeCamp", date: "Nov 2025", link: "https://www.freecodecamp.org/certificates/your-responsive-cert" },
+    { title: "Responsive Web Design", provider: "FreeCodeCamp", date: "Nov 2025", link: "https://freecodecamp.org/certification/fcc-c294ae29-284d-461f-a820-bdb821c1c8a4/responsive-web-design" },
     { title: "Git", provider: "Simplilearn", date: "Nov 2025", link: "https://certificates.simplicdn.net/share/9414976_96894111763369029367.pdf" },
     { title: "Intro to SQL", provider: "Le Wagon", date: "Nov 2025", link: "https://app.lewagon.school/certificates/rzothrxvk3" },
     { title: "JavaScript for web development", provider: "Board Infinity", date: "Jul 2024", link: "https://drive.google.com/file/d/1twtyVgZxBmLMeDplKxAQrjAfgqorbqEQ/view?usp=drivesdk" },
+
   ];
 
   return (

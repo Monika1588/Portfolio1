@@ -11,6 +11,9 @@
   gap: 90px;
   position: relative;
   overflow: hidden;
+
+  margin-right: 100px;
+  
 }
     
 /* -- Left Side -- */
@@ -18,6 +21,8 @@
   flex: 1 1 400px;
   max-width: 600px;
   position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .contact-left::before {
@@ -303,7 +308,6 @@ to {
   }
 }
 
-
 @media (max-width: 480px) {
   .contact-heading {
     font-size: 1.8rem;
@@ -320,19 +324,4 @@ to {
     padding: 12px 20px;
     font-size: 0.95rem;
   }
-}
-.contact-left::before {
-  content: "CONTACT";
-  position: absolute;
-  top: 4%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.025);
-  z-index: -1;
-  user-select: none;
-  pointer-events: none;
-  white-space: nowrap;
 }
