@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
@@ -14,12 +16,15 @@
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 2;
 }
+
 .section-title::before {
   content: "FEEDBACK";
   position: absolute;
-  top: -100px;
-  left: -310px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
   font-size: 8rem;
   font-weight: 900;
   letter-spacing: 14px;
@@ -27,7 +32,10 @@
   z-index: 0;
   user-select: none;
   pointer-events: none;
+  white-space: nowrap;
 }
+
+
 .section-title::after {
   content: "";
   position: absolute;
@@ -43,6 +51,7 @@
 .section-title:hover {
   color: #cfa859;
 }
+
 .feedback-intro {
   text-align: center;
   max-width: 520px;
@@ -61,7 +70,8 @@
   color: #cfa859;
   margin-bottom: 6px;
 }
-.feedback-intro i{
+
+.feedback-intro i {
   font-size: 1rem;
 }
 
@@ -120,45 +130,45 @@
 }
 
 .feedback-form button {
-display: inline-block;
-background: #cfa859;
-color: #0f1117;
-font-weight: 600;
-border: none;
-border-radius: 6px;
-padding: 14px 24px;
-font-size: 1rem;
-cursor: pointer;
-transition: all 0.3s ease;
-overflow: hidden;
-position: relative;
-align-self: center;
-width: 65%;
+  display: inline-block;
+  background: #cfa859;
+  color: #0f1117;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  align-self: center;
+  width: 65%;
 }
 
 .feedback-form button span {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .feedback-form button::after {
-content: "";
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: rgba(255, 255, 255, 0.15);
-transition: all 0.4s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.4s ease;
 }
 
 .feedback-form button:hover::after {
-left: 0;
+  left: 0;
 }
 
 .feedback-form button:hover {
-background: #fff;
-color: #0f1117;
+  background: #fff;
+  color: #0f1117;
 }
 
 .star-rating {
@@ -172,7 +182,7 @@ color: #0f1117;
 }
 
 .star {
-  color: #555; 
+  color: #555;
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
   position: relative;
 }
@@ -215,22 +225,6 @@ color: #0f1117;
   .feedback-form {
     padding: 25px;
   }
-}
-
-.section-title::before {
-  content: "FEEDBACK";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: 900;
-  letter-spacing: 0em;
-  color: rgba(255, 255, 255, 0.025);
-  z-index: -1;
-  user-select: none;
-  pointer-events: none;
-  white-space: nowrap;
 }
 
 .thankyou-card {
@@ -288,7 +282,6 @@ color: #0f1117;
   box-shadow: 0 12px 30px rgba(207, 168, 89, 0.4);
 }
 
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -303,4 +296,27 @@ color: #0f1117;
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@media (max-width: 768px) {
+  .section-title::before {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    letter-spacing: -2em;
+    transform: translate(-50%, -55%);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title::before {
+    font-size: clamp(3rem, 20vw, 4.5rem);
+    letter-spacing: 0em;
+    transform: translate(-50%, -50%);
+    opacity: 0.35;
+  }
+}
+.star-rating {
+  font-size: 2.2rem;
+  gap: 10px;      
+  margin-left: -33px;
 }

@@ -169,84 +169,91 @@
     color: #475569;       
   }
   
-  
+ 
 @media (max-width: 1024px) {
-    .education-section {
-      padding: 80px 30px;
-    }
-  
-    .education-section::before {
-      font-size: 6rem;
-      letter-spacing: 10px;
-      top: 30px;
-    }
-  
-    .edu-header h2 {
-      font-size: 40px;
-    }
-  
-    .edu-grid {
-      gap: 50px;
-    }
+  .education-section {
+    padding: 80px 30px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  @media (max-width: 768px) {
-    .education-section {
-      padding: 70px 20px;
-    }
-  
-    .education-section::before {
-      font-size: 4rem;
-      letter-spacing: 6px;
-      top: 20px;
-    }
-  
-    .edu-header {
-      margin-bottom: 50px;
-    }
-  
-    .edu-header h2 {
-      font-size: 34px;
-    }
-  
-    .edu-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-  
-    .column-title {
-      font-size: 20px;
-    }
-  
-    .edu-item,
-    .cert-card {
-      padding: 18px;
-    }
+  .education-section::before {
+    font-size: 6rem;
+    letter-spacing: 10px;
   }
 
-  @media (max-width: 480px) {
-    .education-section::before {
-      font-size: 3rem;
-      letter-spacing: 4px;
-    }
-  
-    .edu-header h2 {
-      font-size: 28px;
-    }
-  
-    .column-title {
-      font-size: 18px;
-    }
-  
-    .edu-item h4,
-    .cert-card h4 {
-      font-size: 16px;
-    }
-  
-    .college,
-    .desc,
-    .cert-card p {
-      font-size: 12px;
-    }
+  .edu-grid {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 40px 20px;
   }
 
+  .education-section::before {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    top: 16px;
+  }
+
+  .edu-header {
+    margin-bottom: 50px;
+  }
+
+  .edu-header h2 {
+    font-size: 34px;
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .column-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section::before {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    top: 12px;
+  }
+
+  .edu-header h2 {
+    font-size: 28px;
+  }
+
+  .column-title {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .icon {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .edu-item,
+  .cert-card {
+    padding: 16px;
+  }
+
+  .edu-item h4,
+  .cert-card h4 {
+    font-size: 16px;
+  }
+
+  .college,
+  .desc,
+  .cert-card p {
+    font-size: 12px;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
