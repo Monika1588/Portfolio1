@@ -1,6 +1,17 @@
 import "./Education.css";
+import { FaGraduationCap, FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 
 const Education = () => {
+  // Certifications with links
+  const certifications = [
+    { title: "Back End Development and APIs V8", provider: "FreeCodeCamp", date: "Dec 2025", link: "https://freecodecamp.org/certification/fcc-c294ae29-284d-461f-a820-bdb821c1c8a4/back-end-development-and-apis" },
+    { title: "Frontend Development Libraries", provider: "FreeCodeCamp", date: "Nov 2025", link: "https://www.freecodecamp.org/certification/fcc-c294ae29-284d-461f-a820-bdb821c1c8a4/front-end-development-libraries" },
+    { title: "Responsive Web Design", provider: "FreeCodeCamp", date: "Nov 2025", link: "https://www.freecodecamp.org/certificates/your-responsive-cert" },
+    { title: "Git", provider: "Simplilearn", date: "Nov 2025", link: "https://certificates.simplicdn.net/share/9414976_96894111763369029367.pdf" },
+    { title: "Intro to SQL", provider: "Le Wagon", date: "Nov 2025", link: "https://app.lewagon.school/certificates/rzothrxvk3" },
+    { title: "JavaScript for web development", provider: "Board Infinity", date: "Jul 2024", link: "https://drive.google.com/file/d/1twtyVgZxBmLMeDplKxAQrjAfgqorbqEQ/view?usp=drivesdk" },
+  ];
+
   return (
     <section className="education-section" id="education">
       <div className="edu-header">
@@ -13,7 +24,7 @@ const Education = () => {
         {/* LEFT — Academic */}
         <div className="edu-column">
           <h3 className="column-title">
-            <span className="icon">🎓</span> Academic Background    
+            <span className="icon"><FaGraduationCap /></span> Academic Background
           </h3>
 
           <div className="edu-item">
@@ -45,47 +56,31 @@ const Education = () => {
           </div>
         </div>
 
-        {/* RIGHT  Certifications */}
+        {/* RIGHT — Certifications */}
         <div className="edu-column">
           <h3 className="column-title">
-            <span className="icon">🙌</span> Certifications
+            <span className="icon"><FaCertificate /></span> Certifications
           </h3>
 
           <div className="cert-grid">
-            <div className="cert-card">
-              <h4>Back End Development and APIs V8</h4>
-              <p>FreeCodeCamp <span>Dec 2025</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>Frontend Development Libraries</h4>
-              <p>FreeCodeCamp <span>Nov 2025</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>Responsive Web Design</h4>
-              <p>FreeCodeCamp <span>Nov 2025</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>Git</h4>
-              <p>Simplilearn <span>Nov 2025</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>Intro to SQL</h4>
-              <p>Le Wagon <span>Nov 2025</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>JavaScript for web development</h4>
-              <p>Board Infinity <span>Jul 2024</span></p>
-            </div>
-
-            <div className="cert-card">
-              <h4>HTML, CSS, JavaScript</h4>
-              <p>Coursera <span>Jul 2023</span></p>
-            </div>
+            {certifications.map((cert, idx) => (
+              <div key={idx} className="cert-card">
+                <h4>
+                  {cert.title}{" "}
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="cert-link"
+                    title="View Certificate"
+           
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
+                </h4>
+                <p>{cert.provider} <span>{cert.date}</span></p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -155,7 +155,19 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-
+  .cert-link {
+    color: #6b7280;       
+    margin-left: 6px;
+    font-size: 0.85rem;     
+    vertical-align: middle;
+    transition: color 0.2s ease;
+  }
+  
+  .cert-link:hover {
+    color: #475569;       
+  }
+  
+  
 @media (max-width: 1024px) {
     .education-section {
       padding: 80px 30px;

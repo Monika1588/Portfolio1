@@ -26,7 +26,7 @@ const Hero = () => {
           <h1>Monika Verma</h1>
 
           <p>
-            Passionate Frontend Developer and MCA student, focused on building
+            Frontend Developer and MCA student, focused on building
             clean, responsive, and user-friendly web interfaces. Actively
             learning full-stack development to create complete, scalable web
             applications.
