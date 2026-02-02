@@ -90,20 +90,19 @@
 .footer-social h4{
   color:#cfa859
 }
-/* -Social Icons + Email- */
+
 .social-icons {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-/* Footer Socials + Email Icon */
+
 .social-icons {
   display: flex;
   gap: 18px;
 }
 
-/* Links and Email button */
 .social-icons a,
 .social-icons .email-btn {
   width: 40px;
@@ -118,10 +117,9 @@
   color: #bdbdbd;
   cursor: pointer;
   transition: all 0.35s ease;
-  position: relative; /* for copy message */
+  position: relative; 
 }
 
-/* Hover effect */
 .social-icons a:hover,
 .social-icons .email-btn:hover {
   background: #cfa859;
@@ -130,7 +128,6 @@
   box-shadow: 0 12px 35px #C0C0C0;
 }
 
-/* Email copied message */
 .copy-msg {
   position: absolute;
   top: -25px;
@@ -148,7 +145,6 @@
   z-index: 10;
 }
 
-/* Optional fade-out animation for copied message */
 .email-btn .copy-msg {
   animation: fadeOut 2s forwards;
 }
@@ -249,3 +245,4 @@
   margin-left: auto;
   margin-right: auto;
 }
+
