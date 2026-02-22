@@ -15,7 +15,7 @@ const projects = [
     img: project1,
     desc: "Converted Figma design into responsive React website.",
     tech: ["React", "CSS", "Figma"],
-    demo: "figma-two-blond-57.vercel.app",
+    demo: "https://figma-two-blond-57.vercel.app/",
     github: "https://github.com/Monika1588/Figma",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     img: project5,
     desc: "Interactive drum machine built in React.",
     tech: ["React", "Hooks", "CSS"],
-    demo: "drum-machine-five-pied.vercel.app",
+    demo: "https://drum-machine-five-pied.vercel.app/",
     github: "https://github.com/Monika1588/Drum_Machine",
   },
   {
