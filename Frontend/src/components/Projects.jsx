@@ -48,7 +48,7 @@ const projects = [
     img: project6,
     desc: "Memory card matching game.",
     tech: ["React", "Game Logic", "CSS"],
-    demo: "magic-match-iota.vercel.app",
+    demo: "https://magic-match-iota.vercel.app/",
     github: "https://github.com/Monika1588/Node_project",
   },
   {
