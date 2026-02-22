@@ -15,7 +15,7 @@ const projects = [
     img: project1,
     desc: "Converted Figma design into responsive React website.",
     tech: ["React", "CSS", "Figma"],
-    demo: "https://euphonious-bublanina-22e0d5.netlify.app/",
+    demo: "figma-two-blond-57.vercel.app",
     github: "https://github.com/Monika1588/Figma",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     img: project5,
     desc: "Interactive drum machine built in React.",
     tech: ["React", "Hooks", "CSS"],
-    demo: "https://harmonious-parfait-ac68ac.netlify.app/",
+    demo: "drum-machine-five-pied.vercel.app",
     github: "https://github.com/Monika1588/Drum_Machine",
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     img: project6,
     desc: "Memory card matching game.",
     tech: ["React", "Game Logic", "CSS"],
-    demo: "https://soft-liger-bfc535.netlify.app",
+    demo: "magic-match-iota.vercel.app",
     github: "https://github.com/Monika1588/Node_project",
   },
   {

@@ -1,6 +1,6 @@
 import profile from "../assets/profile.jpeg";
 import "./Hero.css";
-import resume from "../assets/Monika Verma(Resume).pdf";
+import resume from "../assets/Monika (Resume)3.pdf";
 import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import { GoLocation } from "react-icons/go";
