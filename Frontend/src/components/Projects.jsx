@@ -26,22 +26,15 @@ const projects = [
     demo: "https://node-project-4-ks8n.onrender.com",
     github: "https://github.com/Monika1588/Node_project",
   },
-  {
+  /*{
     title: "Leave Management",
     img: project3,
     desc: "Web-based system to manage student leave requests with a clean, user-friendly interface.",
     tech: ["React", "API", "CSS"],
     demo: "#",
     github: "#",
-  },
-  {
-    title: "Study Planner",
-    img: project4,
-    desc: "Productivity tool with timers and progress tracking.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    demo: "https://startling-starlight-26e4dd.netlify.app",
-    github: "https://github.com/Monika1588/Study-Planner",
-  },
+  },*/
+
   {
     title: "Drum Machine",
     img: project5,
@@ -58,6 +51,14 @@ const projects = [
     demo: "https://soft-liger-bfc535.netlify.app",
     github: "https://github.com/Monika1588/Node_project",
   },
+  {
+    title: "Study Planner",
+    img: project4,
+    desc: "Productivity tool with timers and progress tracking.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    demo: "https://startling-starlight-26e4dd.netlify.app",
+    github: "https://github.com/Monika1588/Study-Planner",
+  }
 ];
 
 const Projects = () => {

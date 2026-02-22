@@ -173,12 +173,15 @@
 
 .star-rating {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
   font-size: 2.6rem;
   cursor: pointer;
   margin: 12px 0;
-  padding-left: 100px;
   user-select: none;
+  padding-left: 0;
+  width: 100%;
 }
 
 .star {

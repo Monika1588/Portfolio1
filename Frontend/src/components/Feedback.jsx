@@ -68,7 +68,7 @@ export default function Feedback() {
 
       <form className="feedback-form" onSubmit={submit}>
         <p className="feedback-intro">
-          <strong><h3>Wait, before you go…</h3></strong>
+          <strong><h3>Before you go…</h3></strong>
           <i> I’d like to hear your valuable feedback on this portfolio experience.</i>
         </p>
 

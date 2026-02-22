@@ -275,14 +275,14 @@ to {
   .contact-section {
     margin-left: 0;
     margin-right: 0;
-    padding: 70px 40px; /* reduced */
+    padding: 70px 40px;
     gap: 40px;
   }
 
   .contact-section::before {
     font-size: 5.2rem;
     letter-spacing: 6px;
-    top: 18px; /* closer to top */
+    top: 18px; 
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
