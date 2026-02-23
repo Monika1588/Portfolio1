@@ -41,9 +41,9 @@
   position: absolute;
   left: 50%;
   bottom: -10px;
-  width: 60px;
-  height: 3px;
-  background: #cfa859;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #cfa859, transparent);
   transform: translateX(-50%);
   border-radius: 2px;
 }
