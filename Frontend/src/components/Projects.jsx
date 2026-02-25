@@ -38,10 +38,10 @@ const projects = [
     github: "https://github.com/Monika1588/Node_project",
   },
   {
-    title: "Drum Machine",
+    title: "Sound Pad",
     category: ["React"],
     img: project5,
-    desc: "Interactive drum machine built with React.",
+    desc: "Interactive Sound Pad built with React.",
     tech: ["React", "Hooks", "CSS"],
     demo: "https://drum-machine-five-pied.vercel.app/",
     github: "https://github.com/Monika1588/Drum_Machine",

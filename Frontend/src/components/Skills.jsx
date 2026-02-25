@@ -27,8 +27,8 @@ const Skills = () => {
   }, []);
 
   const skillsData = [
-    { name: "React", icon: <FaReact color="#61DBFB" />, projects: ["Portfolio", "Hospital Appointment management", "Magic Match", "Drum Machine"] },
-    { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, projects: ["Study Planner", "Leave Mangement", "Drum Machine", "Magic Match"] },
+    { name: "React", icon: <FaReact color="#61DBFB" />, projects: ["Portfolio", "Hospital Appointment management", "Magic Match", "Sound Pad"] },
+    { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, projects: ["Study Planner", "Leave Mangement", "Sound Pad", "Magic Match"] },
     { name: "HTML", icon: <FaHtml5 color="#E34F26" />, projects: ["Study Planner", "Hospital App", "Leave Mangement System"] },
     { name: "CSS", icon: <FaCss3Alt color="#264DE4" />, projects: ["UI Animations", "Hover Effects", "Grid Designs"] },
     { name: "Node.js", icon: <FaNodeJs color="#68A063" />, projects: ["Hospital Appointment management", "Portfolio", "E-commerce"] },
