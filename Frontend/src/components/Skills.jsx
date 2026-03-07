@@ -7,7 +7,7 @@ import {
   FaNodeJs, 
   FaGitAlt 
 } from "react-icons/fa";
-import { SiMongodb, SiFigma } from "react-icons/si";
+import { SiMongodb, SiFigma, SiGithub, SiExpress } from "react-icons/si";
 import "./Skills.css";
 
 const Skills = () => {
@@ -32,8 +32,10 @@ const Skills = () => {
     { name: "HTML", icon: <FaHtml5 color="#E34F26" />, projects: ["Study Planner", "Hospital App", "Leave Mangement System"] },
     { name: "CSS", icon: <FaCss3Alt color="#264DE4" />, projects: ["UI Animations", "Hover Effects", "Grid Designs"] },
     { name: "Node.js", icon: <FaNodeJs color="#68A063" />, projects: ["Hospital Appointment management", "Portfolio", "E-commerce"] },
+    { name: "Express.js", icon: <SiExpress color="#FFFFFF" />, projects: ["Hospital Appointment management", "Portfolio", "E-commerce"] },
     { name: "MongoDB", icon: <SiMongodb color="#47A248" />, projects: ["Portfolio", "Hospital Appointment management"] },
     { name: "Git", icon: <FaGitAlt color="#F1502F" />, projects: ["Version Control", "Collab Workflow"] },
+    { name: "GitHub", icon: <SiGithub color="#FFFFFF" />, projects: [      "Portfolio Repository", "Hospital Appointment Management Repo", "Magic Match Repo", "Sound Pad Repo"] },
     { name: "Figma", icon: <SiFigma color="#F24E1E" />, projects: ["Pet Website", "Plants E-commerce"] },
   ];
 
