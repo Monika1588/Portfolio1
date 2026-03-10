@@ -14,10 +14,19 @@ const projects = [
     title: "MERN Portfolio",
     category: ["Full Stack", "MERN"],
     img: mernPortfolio,
-    desc: "Full-stack portfolio built using MERN with dynamic projects and contact form.",
+    desc: "Full-stack portfolio built using the MERN stack.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     demo: "https://portfolio1-nu-mauve.vercel.app/",
     github: "https://github.com/Monika1588/Portfolio1",
+  },
+  {
+    title: "Hospital Management",
+    category: ["Full Stack"],
+    img: project2,
+    desc: "Full-stack app for booking and managing doctor appointments.",
+    tech: ["Node.js", "Express", "MongoDB", "HTML", "CSS", "JavaScript"],
+    demo: "https://node-project-4-ks8n.onrender.com",
+    github: "https://github.com/Monika1588/Node_project",
   },
   {
     title: "Pet Care Website",
@@ -28,15 +37,7 @@ const projects = [
     demo: "https://figma-two-blond-57.vercel.app/",
     github: "https://github.com/Monika1588/Figma",
   },
-  {
-    title: "Hospital Management",
-    category: ["Full Stack"],
-    img: project2,
-    desc: "Full-stack app for managing patients and appointments.",
-    tech: ["Node.js", "Express", "MongoDB", "HTML", "CSS", "JavaScript"],
-    demo: "https://node-project-4-ks8n.onrender.com",
-    github: "https://github.com/Monika1588/Node_project",
-  },
+
   {
     title: "Sound Pad",
     category: ["React"],
