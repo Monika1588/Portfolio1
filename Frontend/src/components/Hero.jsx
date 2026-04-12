@@ -1,5 +1,5 @@
 import "./Hero.css";
-import resume from "../assets/Monika (Resume)f.pdf";
+import resume from "../assets/Monika_Verma_Frontend_Resume.pdf";
 import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import { GoLocation } from "react-icons/go";
