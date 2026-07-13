@@ -12,6 +12,7 @@ import { GoLocation } from "react-icons/go";
 const Hero = () => {
   const email = "vermamonika3733@gmail.com";
   const [copied, setCopied] = useState(false);
+  const [showResumeMenu, setShowResumeMenu] = useState(false);
 
   const copyEmail = async () => {
     try {
@@ -42,10 +43,10 @@ const Hero = () => {
 
           <div className="hero-btns">
             <a href="#projects" className="btn primary">View My Work</a>
-            <div className="resume-dropdown">
-  <button className="btn secondary resume-btn">
+            <details className="resume-dropdown">
+  <summary className="btn secondary resume-btn">
     Resume <FaChevronDown className="resume-arrow" />
-  </button>
+  </summary>
 
   <div className="resume-menu">
     <a
@@ -63,7 +64,7 @@ const Hero = () => {
       ⬇ Download Resume
     </a>
   </div>
-</div>
+</details>
           </div>
 
           <div className="hero-socials">
