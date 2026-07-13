@@ -9,10 +9,10 @@ import { useState } from "react";
 import { GoLocation } from "react-icons/go";
 
 const resume = "/Monika_Verma_Frontend_Resume.pdf";
+
 const Hero = () => {
   const email = "vermamonika3733@gmail.com";
   const [copied, setCopied] = useState(false);
-  const [showResumeMenu, setShowResumeMenu] = useState(false);
 
   const copyEmail = async () => {
     try {
@@ -42,7 +42,10 @@ const Hero = () => {
           </p>
 
           <div className="hero-btns">
-            <a href="#projects" className="btn primary">View My Work</a>
+            <a href="#projects" className="btn primary">
+              View My Work
+            </a>
+
             <details className="resume-dropdown">
               <summary className="btn secondary resume-btn">
                 Resume <FaChevronDown className="resume-arrow" />
@@ -103,7 +106,10 @@ const Hero = () => {
         <div
           className="scroll-down"
           onClick={() => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth",
+            });
           }}
           aria-label="Scroll to Bottom"
         >

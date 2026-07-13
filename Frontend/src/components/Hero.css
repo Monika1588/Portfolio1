@@ -152,6 +152,7 @@ header {
 .scroll-down:hover .scroll-arrow {
   color: #cfa859;
 }
+
 .email-wrapper {
   position: relative;
   display: inline-flex;
@@ -159,7 +160,7 @@ header {
 
 .email-wrapper .copy-msg {
   position: absolute;
-  left: 50px; 
+  left: 50px;
   top: -10%;
   transform: translateY(-50%);
   background: #111;
@@ -169,6 +170,9 @@ header {
   border-radius: 6px;
   white-space: nowrap;
 }
+
+/* Resume Dropdown */
+
 .resume-dropdown {
   position: relative;
   display: inline-block;
@@ -179,6 +183,15 @@ header {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  list-style: none;
+}
+
+.resume-btn::-webkit-details-marker {
+  display: none;
+}
+
+.resume-btn::marker {
+  display: none;
 }
 
 .resume-arrow {
@@ -187,9 +200,8 @@ header {
 
 .resume-menu {
   position: absolute;
-  top: 100%;        
+  top: calc(100% + 8px);
   left: 0;
-  margin-top: 2px;
   min-width: 210px;
   background: #111;
   border: 1px solid #d4af37;
@@ -200,11 +212,11 @@ header {
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
-.resume-dropdown:hover .resume-menu {
+.resume-dropdown[open] .resume-menu {
   display: block;
 }
 
-.resume-dropdown:hover .resume-arrow {
+.resume-dropdown[open] .resume-arrow {
   transform: rotate(180deg);
 }
 
@@ -220,9 +232,15 @@ header {
   background: #d4af37;
   color: #111;
 }
+
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -237,8 +255,6 @@ header {
   .hero-btns .btn {
     width: 100%;
   }
-}
-@media (max-width: 768px) {
 
   .resume-dropdown {
     width: 100%;
@@ -248,24 +264,13 @@ header {
     width: 100%;
     justify-content: center;
   }
-  
 
   .resume-menu {
-    position: static;     
+    position: static;
     width: 100%;
     margin-top: 10px;
-
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-
-    display: none;
     box-shadow: none;
     border-radius: 10px;
-  }
-
-  .resume-menu.show {
-    display: block;
   }
 
   .resume-menu a {
