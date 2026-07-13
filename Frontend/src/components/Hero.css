@@ -169,6 +169,57 @@ header {
   border-radius: 6px;
   white-space: nowrap;
 }
+.resume-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.resume-arrow {
+  transition: transform 0.3s ease;
+}
+
+.resume-menu {
+  position: absolute;
+  top: 100%;        
+  left: 0;
+  margin-top: 2px;
+  min-width: 210px;
+  background: #111;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.resume-dropdown:hover .resume-menu {
+  display: block;
+}
+
+.resume-dropdown:hover .resume-arrow {
+  transform: rotate(180deg);
+}
+
+.resume-menu a {
+  display: block;
+  padding: 14px 18px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-menu a:hover {
+  background: #d4af37;
+  color: #111;
+}
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
@@ -185,5 +236,41 @@ header {
 
   .hero-btns .btn {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+
+  .resume-dropdown {
+    width: 100%;
+  }
+
+  .resume-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+
+  .resume-menu {
+    position: static;     
+    width: 100%;
+    margin-top: 10px;
+
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+
+    display: none;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  .resume-menu.show {
+    display: block;
+  }
+
+  .resume-menu a {
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
   }
 }

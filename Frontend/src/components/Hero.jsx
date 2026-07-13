@@ -1,6 +1,11 @@
 import "./Hero.css";
 import resume from "../assets/Monika_Verma_Frontend_Resume.pdf";
-import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaChevronDown,
+} from "react-icons/fa";
 import { useState } from "react";
 import { GoLocation } from "react-icons/go";
 
@@ -37,14 +42,28 @@ const Hero = () => {
 
           <div className="hero-btns">
             <a href="#projects" className="btn primary">View My Work</a>
-            <a
-              href={resume}
-              className="btn secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
+            <div className="resume-dropdown">
+  <button className="btn secondary resume-btn">
+    Resume <FaChevronDown className="resume-arrow" />
+  </button>
+
+  <div className="resume-menu">
+    <a
+      href={resume}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📄 View Resume
+    </a>
+
+    <a
+      href={resume}
+      download="Monika_Verma_Frontend_Resume.pdf"
+    >
+      ⬇ Download Resume
+    </a>
+  </div>
+</div>
           </div>
 
           <div className="hero-socials">
